@@ -1,0 +1,11 @@
+services:
+  riak:
+    image: basho/riak-kv:ubuntu-2.2.3
+    container_name: riak
+    ports:
+      - "8098:8098"
+    volumes:
+      - riak_data:/var/lib/riak
+
+volumes:
+  riak_data:
